@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import './Contact.css';
+
+
 
 function Contact() {
   const [name, setName] = useState('');
@@ -7,15 +10,15 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Obrigado por entrar em contato, ${name}!`);
+    alert(`Obrigado por se cadastrar, ${name}!`);
   };
 
   return (
     <div>
-      <h2>Contact</h2>
+      <h2>cadastro</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nome:</label>
+          <label>Nome completo:</label>
           <input
             type="text"
             value={name}
@@ -33,14 +36,22 @@ function Contact() {
           />
         </div>
         <div>
-          <label>Mensagem:</label>
-          <textarea
-            value={message}
+          <label>telefone:</label>
+          <input
+            type="number"
             onChange={(e) => setMessage(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Enviar</button>
+        <div>
+          <label>CPF:</label>
+          <input
+            type="number"
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">cadastrar</button>
       </form>
     </div>
   );

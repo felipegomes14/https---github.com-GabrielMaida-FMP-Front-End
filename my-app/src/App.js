@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/home.js';
 import About from './pages/about.js';
 import Contact from './pages/contact.js';
+import './App.css';
+
 
 function App() {
   return (
@@ -11,13 +13,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">inicio</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">sobre nós</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">Formulário</Link>
             </li>
           </ul>
         </nav>
