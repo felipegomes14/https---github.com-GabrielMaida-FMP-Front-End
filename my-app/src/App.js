@@ -14,13 +14,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">inicio</Link>
+              <Link to="/contact">CADASTRO</Link>
             </li>
             <li>
-              <Link to="/about">sobre nós</Link>
+              <Link to="/about">ESTUDOS</Link>
             </li>
             <li>
-              <Link to="/contact">Formulário</Link>
+              <Link to="/">TREINO</Link>
             </li>
           </ul>
         </nav>

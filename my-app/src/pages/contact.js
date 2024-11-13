@@ -6,7 +6,8 @@ import './Contact.css';
 function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [CPF, setCPF] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,7 +40,7 @@ function Contact() {
           <label>telefone:</label>
           <input
             type="number"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setTelefone(e.target.value)}
             required
           />
         </div>
@@ -47,7 +48,7 @@ function Contact() {
           <label>CPF:</label>
           <input
             type="number"
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => setCPF(e.target.value)}
             required
           />
         </div>
