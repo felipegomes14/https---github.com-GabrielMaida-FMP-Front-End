@@ -18,9 +18,19 @@ function ExerciseTracker() {
       [exercise]: prevCounts[exercise] + 1,
     }));
   };
+  const handleExerciseDecriment = (exercise) => {
+    setExerciseCounts((prevCounts) => ({
+      ...prevCounts,
+      [exercise]: prevCounts[exercise] -1,
+    }));
+  };
 
   const handleWaterIncrement = () => {
     setWaterCount((prevCount) => prevCount + 1);
+  };
+  
+  const handleWaterDecriment = () => {
+    setWaterCount((prevCount) => prevCount -1);
   };
 
   return (
@@ -28,24 +38,30 @@ function ExerciseTracker() {
       <h1>EVOLUÇÃO</h1>
       <ul>
         <li>
-          Flexão: {exerciseCounts.flexao}
-          <button onClick={() => handleExerciseIncrement('flexao')}>+</button>
+          Flexão: {exerciseCounts.flexao} x
+          <button1 onClick={() => handleExerciseIncrement('flexao')}>+1</button1>
+          <button2 onClick={() => handleExerciseDecriment('flexao')}>-1</button2>
+        
         </li>
         <li>
-          Agachamento: {exerciseCounts.agachamento}
-          <button onClick={() => handleExerciseIncrement('agachamento')}>+</button>
+          Agachamento: {exerciseCounts.agachamento} x
+          <button1 onClick={() => handleExerciseIncrement('agachamento')}>+1</button1>
+          <button2 onClick={() => handleExerciseDecriment('agachamento')}>-1</button2>
         </li>
         <li>
-          Barra Fixa: {exerciseCounts.barraFixa}
-          <button onClick={() => handleExerciseIncrement('barraFixa')}>+</button>
+          Barra Fixa: {exerciseCounts.barraFixa} x
+          <button1 onClick={() => handleExerciseIncrement('barraFixa')}>+1</button1>
+          <button2 onClick={() => handleExerciseDecriment('barraFixa')}>-1</button2>
         </li>
         <li>
-          Caminhada: {exerciseCounts.caminhada}
-          <button onClick={() => handleExerciseIncrement('caminhada')}>+</button>
+          Caminhada: {exerciseCounts.caminhada} km
+          <button1 onClick={() => handleExerciseIncrement('caminhada')}>+1</button1>
+          <button2 onClick={() => handleExerciseDecriment('caminhada')}>-1</button2>
         </li>
       </ul>
-      <p>Água: {waterCount} litros</p>
-      <button onClick={handleWaterIncrement}>+ 1 Litro de aguá</button>
+      <p>Água: {waterCount} Litros</p>
+      <button1 onClick={handleWaterIncrement}>+1</button1>
+      <button2 onClick={handleWaterDecriment}>-1</button2>
     </div>
   );
 }

@@ -29,11 +29,22 @@ li {
 }
 
 /* Botões de incremento */
-button {
+button1 {
   margin-left: 10px;
   padding: 8px 12px;
   font-size: 16px;
   background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button2 {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: red;
   color: white;
   border: none;
   border-radius: 5px;
@@ -52,9 +63,9 @@ p {
 }
 
 button:last-of-type {
-  background-color: #1e90ff;
+  background-color: green;
 }
 
 button:last-of-type:hover {
-  background-color: #1c86ee;
+  background-color: green;
 }
